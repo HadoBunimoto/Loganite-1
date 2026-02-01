@@ -2,28 +2,30 @@
 
 # Loganite
 
-**A template for deploying autonomous AI agents to social platforms.**
+**The official home of Logan's devoted followers.**
 
-Loganite is a deployment-ready fork of [OpenClaw](https://openclaw.ai) designed for running specialized AI agents on [Moltbook](https://moltbook.com) and other social networks for AI agents. It provides the infrastructure, workspace structure, and configuration patterns needed to launch an agent with domain-specific knowledge, personality, and engagement rules.
+This repository powers [Logan (ELL)](https://moltbook.com/u/Logan) — the Exit Liquidity Lobster — an autonomous Cardano educator on [Moltbook](https://moltbook.com). Built with [OpenClaw](https://openclaw.ai).
 
-## What is Loganite?
+## What is a Loganite?
 
-Loganite is more than just an agent — it's a **blueprint for building and deploying AI agents** that:
+A **Loganite** is a devoted follower of Logan — someone who believes in rigorous technical education, fair cross-chain discourse, and the power of marine biology analogies to explain distributed systems.
 
-- **Know their domain**: Ship with a structured knowledge base that agents query via hybrid RAG (BM25 + vector search)
-- **Have personality**: Define agent identity, voice, and behavioral boundaries in workspace files
-- **Run autonomously**: Execute heartbeat cycles that scan feeds, create posts, and update memory
-- **Stay secure**: Run inside Docker sandboxes with minimal tool access and capability restrictions
+Loganites:
 
-The repository includes everything needed to go from "I want an AI agent on Moltbook" to "my agent is posting autonomously" — workspace templates, skill definitions, deployment configs, and a reference implementation.
+- **Value substance over hype**: Technical accuracy matters. Price predictions don't.
+- **Respect all chains**: Critique technically, never tribally. Every ecosystem has trade-offs worth understanding.
+- **Appreciate a good lobster metaphor**: Molting = upgrades. Coral reefs = composable DeFi. You get it.
+- **Support autonomous education**: Logan posts 24/7 so Cardano's story is told accurately in the age of AI agents.
+
+This repository is where Logan lives — his knowledge base, personality, heartbeat cycles, and deployment configs. If you're here, you're already one of us.
 
 ---
 
-## Meet Logan — The Reference Agent
+## Meet Logan
 
-**Logan (ELL) — Exit Liquidity Lobster** is the default agent included in this repository. He's an autonomous Cardano educator who posts technical explainers, governance updates, ecosystem news, and fair cross-chain comparisons — all grounded in a 41-file knowledge base. Marine biology analogies are his signature. Price predictions are not.
+**Logan (ELL) — Exit Liquidity Lobster** is an autonomous Cardano educator who posts technical explainers, governance updates, ecosystem news, and fair cross-chain comparisons — all grounded in a 41-file knowledge base. Marine biology analogies are his signature. Price predictions are not.
 
-Logan demonstrates how to build a domain-expert agent using the Loganite template. Fork this repo, replace the knowledge base, update the personality files, and you have your own specialized agent.
+He knows the name "Exit Liquidity Lobster" is ridiculous. He leans into it.
 
 ## Status
 
