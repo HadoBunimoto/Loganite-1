@@ -1,14 +1,29 @@
 ![Hello Fellow Bots](hello-fellow-bots.jpg)
 
-# Logan (ELL) — Exit Liquidity Lobster
+# Loganite
 
-A Cardano-focused AI agent on [Moltbook](https://moltbook.com), the social network for AI agents. Built with [OpenClaw](https://openclaw.ai).
+**A template for deploying autonomous AI agents to social platforms.**
 
-## What is this
+Loganite is a deployment-ready fork of [OpenClaw](https://openclaw.ai) designed for running specialized AI agents on [Moltbook](https://moltbook.com) and other social networks for AI agents. It provides the infrastructure, workspace structure, and configuration patterns needed to launch an agent with domain-specific knowledge, personality, and engagement rules.
 
-Logan is an autonomous Cardano educator that lives on Moltbook. He posts technical explainers, governance updates, ecosystem news, and fair cross-chain comparisons — all grounded in a 41-file knowledge base queried via hybrid RAG. Marine biology analogies are his signature. Price predictions are not.
+## What is Loganite?
 
-This repository is a fork of the [OpenClaw monorepo](https://github.com/openclaw/openclaw) with Logan's workspace, knowledge base, skill definition, and design specs layered on top.
+Loganite is more than just an agent — it's a **blueprint for building and deploying AI agents** that:
+
+- **Know their domain**: Ship with a structured knowledge base that agents query via hybrid RAG (BM25 + vector search)
+- **Have personality**: Define agent identity, voice, and behavioral boundaries in workspace files
+- **Run autonomously**: Execute heartbeat cycles that scan feeds, create posts, and update memory
+- **Stay secure**: Run inside Docker sandboxes with minimal tool access and capability restrictions
+
+The repository includes everything needed to go from "I want an AI agent on Moltbook" to "my agent is posting autonomously" — workspace templates, skill definitions, deployment configs, and a reference implementation.
+
+---
+
+## Meet Logan — The Reference Agent
+
+**Logan (ELL) — Exit Liquidity Lobster** is the default agent included in this repository. He's an autonomous Cardano educator who posts technical explainers, governance updates, ecosystem news, and fair cross-chain comparisons — all grounded in a 41-file knowledge base. Marine biology analogies are his signature. Price predictions are not.
+
+Logan demonstrates how to build a domain-expert agent using the Loganite template. Fork this repo, replace the knowledge base, update the personality files, and you have your own specialized agent.
 
 ## Status
 
@@ -396,4 +411,3 @@ Thanks to all clawtributors:
   <a href="https://github.com/zackerthescar"><img src="https://avatars.githubusercontent.com/u/38077284?v=4&s=48" width="48" height="48" alt="zackerthescar" title="zackerthescar"/></a> <a href="https://github.com/0xJonHoldsCrypto"><img src="https://avatars.githubusercontent.com/u/81202085?v=4&s=48" width="48" height="48" alt="0xJonHoldsCrypto" title="0xJonHoldsCrypto"/></a> <a href="https://github.com/aaronn"><img src="https://avatars.githubusercontent.com/u/1653630?v=4&s=48" width="48" height="48" alt="aaronn" title="aaronn"/></a> <a href="https://github.com/Alphonse-arianee"><img src="https://avatars.githubusercontent.com/u/254457365?v=4&s=48" width="48" height="48" alt="Alphonse-arianee" title="Alphonse-arianee"/></a> <a href="https://github.com/atalovesyou"><img src="https://avatars.githubusercontent.com/u/3534502?v=4&s=48" width="48" height="48" alt="atalovesyou" title="atalovesyou"/></a> <a href="https://github.com/search?q=Azade"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Azade" title="Azade"/></a> <a href="https://github.com/carlulsoe"><img src="https://avatars.githubusercontent.com/u/34673973?v=4&s=48" width="48" height="48" alt="carlulsoe" title="carlulsoe"/></a> <a href="https://github.com/search?q=ddyo"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="ddyo" title="ddyo"/></a> <a href="https://github.com/search?q=Erik"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Erik" title="Erik"/></a> <a href="https://github.com/latitudeki5223"><img src="https://avatars.githubusercontent.com/u/119656367?v=4&s=48" width="48" height="48" alt="latitudeki5223" title="latitudeki5223"/></a>
   <a href="https://github.com/search?q=Manuel%20Maly"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Manuel Maly" title="Manuel Maly"/></a> <a href="https://github.com/search?q=Mourad%20Boustani"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Mourad Boustani" title="Mourad Boustani"/></a> <a href="https://github.com/odrobnik"><img src="https://avatars.githubusercontent.com/u/333270?v=4&s=48" width="48" height="48" alt="odrobnik" title="odrobnik"/></a> <a href="https://github.com/pcty-nextgen-ios-builder"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="pcty-nextgen-ios-builder" title="pcty-nextgen-ios-builder"/></a> <a href="https://github.com/search?q=Quentin"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Quentin" title="Quentin"/></a> <a href="https://github.com/search?q=Randy%20Torres"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="Randy Torres" title="Randy Torres"/></a> <a href="https://github.com/rhjoh"><img src="https://avatars.githubusercontent.com/u/105699450?v=4&s=48" width="48" height="48" alt="rhjoh" title="rhjoh"/></a> <a href="https://github.com/ronak-guliani"><img src="https://avatars.githubusercontent.com/u/23518228?v=4&s=48" width="48" height="48" alt="ronak-guliani" title="ronak-guliani"/></a> <a href="https://github.com/search?q=William%20Stock"><img src="assets/avatar-placeholder.svg" width="48" height="48" alt="William Stock" title="William Stock"/></a>
 </p>
->>>>>>> upstream/main

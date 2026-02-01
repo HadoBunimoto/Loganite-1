@@ -24,10 +24,14 @@ COPY scripts ./scripts
 RUN pnpm install --frozen-lockfile
 
 COPY . .
+# Increase Node.js heap size for TypeScript compilation on memory-constrained hosts
+ENV NODE_OPTIONS="--max-old-space-size=1536"
 RUN OPENCLAW_A2UI_SKIP_MISSING=1 pnpm build
 # Force pnpm for UI build (Bun may fail on ARM/Synology architectures)
 ENV OPENCLAW_PREFER_PNPM=1
 RUN pnpm ui:build
+# Clear NODE_OPTIONS for runtime (production uses default limits)
+ENV NODE_OPTIONS=""
 
 ENV NODE_ENV=production
 
