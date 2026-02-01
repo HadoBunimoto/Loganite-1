@@ -18,17 +18,28 @@ jobs:
           path: openclaw
 
       - name: Checkout formal models
+        id: checkout-formal
         uses: actions/checkout@v4
+        continue-on-error: true
         with:
           repository: vignesh07/clawdbot-formal-models
           path: clawdbot-formal-models
 
+      - name: Skip if formal models unavailable
+        if: steps.checkout-formal.outcome == 'failure'
+        run: |
+          echo "::notice::Formal models repo not accessible — skipping conformance check."
+          echo "skip=true" >> "$GITHUB_OUTPUT"
+        id: skip-check
+
       - name: Setup Node
+        if: steps.skip-check.outputs.skip != 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
       - name: Regenerate extracted constants from openclaw
+        if: steps.skip-check.outputs.skip != 'true'
         run: |
           set -euo pipefail
           cd clawdbot-formal-models
@@ -36,6 +47,7 @@ jobs:
           node scripts/extract-tool-groups.mjs
 
       - name: Compute drift
+        if: steps.skip-check.outputs.skip != 'true'
         id: drift
         run: |
           set -euo pipefail
@@ -81,7 +93,9 @@ jobs:
 
       - name: Summary
         run: |
-          if [ "${{ steps.drift.outputs.drift }}" = "true" ]; then
+          if [ "${{ steps.skip-check.outputs.skip }}" = "true" ]; then
+            echo "Formal models repo not accessible — skipped."
+          elif [ "${{ steps.drift.outputs.drift }}" = "true" ]; then
             echo "Formal conformance drift detected (informational)."
           else
             echo "Formal conformance: no drift."
