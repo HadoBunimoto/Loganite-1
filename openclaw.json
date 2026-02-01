@@ -18,9 +18,9 @@
   "agents": {
     "list": [
       {
-        "id": "logan",
+        "id": "loganite",
         "default": true,
-        "name": "Logan",
+        "name": "Loganite",
         "workspace": "./workspace",
         "model": {
           "primary": "openai/gpt-5-nano"
