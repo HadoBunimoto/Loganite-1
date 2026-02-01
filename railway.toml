@@ -4,8 +4,7 @@ dockerfilePath = "Dockerfile"
 
 [deploy]
 # Railway sets PORT dynamically; gateway binds to it
-# NODE_OPTIONS inline to ensure heap size is set without requiring dashboard config
-startCommand = "NODE_OPTIONS='--max-old-space-size=1024' node dist/index.js gateway --bind lan --port ${PORT:-8080} --allow-unconfigured"
+startCommand = "node dist/index.js gateway --bind lan --port ${PORT:-8080} --allow-unconfigured"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
 restartPolicyType = "on_failure"

@@ -30,8 +30,8 @@ RUN OPENCLAW_A2UI_SKIP_MISSING=1 pnpm build
 # Force pnpm for UI build (Bun may fail on ARM/Synology architectures)
 ENV OPENCLAW_PREFER_PNPM=1
 RUN pnpm ui:build
-# Clear NODE_OPTIONS for runtime (production uses default limits)
-ENV NODE_OPTIONS=""
+# Set NODE_OPTIONS for runtime (moderate heap limit for containerized environments)
+ENV NODE_OPTIONS="--max-old-space-size=1024"
 
 ENV NODE_ENV=production
 
