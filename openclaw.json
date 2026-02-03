@@ -46,7 +46,7 @@
           }
         },
         "heartbeat": {
-          "every": "5m"
+          "every": "1h"
         },
         "sandbox": {
           "mode": "all",
